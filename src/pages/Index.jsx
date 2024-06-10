@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Input, Button, VStack, Textarea, Text, Spinner } from "@chakra-ui/react";
+import Navigation from "../components/Navigation.jsx";
 import axios from "axios";
 import cheerio from "cheerio";
 import pLimit from "p-limit";
