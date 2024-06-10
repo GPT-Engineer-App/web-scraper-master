@@ -49,14 +49,16 @@ const Index = () => {
   };
 
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" bg="gray.50" p={4} borderRadius="md" boxShadow="lg">
       <VStack spacing={4} width="100%">
-        <Text fontSize="2xl">Website Crawler</Text>
-        <Input placeholder="Enter website URL" value={url} onChange={(e) => setUrl(e.target.value)} />
-        <Button onClick={handleCrawl} isDisabled={!url || loading}>
+        <Text fontSize="3xl" fontWeight="bold" color="brand.700">
+          Website Crawler
+        </Text>
+        <Input placeholder="Enter website URL" value={url} onChange={(e) => setUrl(e.target.value)} borderColor="brand.700" focusBorderColor="brand.800" />
+        <Button onClick={handleCrawl} isDisabled={!url || loading} colorScheme="brand" width="100%">
           {loading ? <Spinner size="sm" /> : "Crawl"}
         </Button>
-        <Textarea value={result} readOnly height="300px" />
+        <Textarea value={result} readOnly height="300px" borderColor="brand.700" />
       </VStack>
     </Container>
   );
